@@ -1,4 +1,6 @@
 import { DealCard } from "../components/DealCard";
+import { deals } from "../app/data/deals";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 text-white p-8">
@@ -9,31 +11,11 @@ export default function Home() {
 
       <section className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6"> Available Mystery Deals</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <DealCard
-            movieA="Dune: Part Two"
-            movieB="Oppenheimer"
-            price={250}
-            originalPrice={500}
-            theater="PVR Phoenix, Hyderabad"
-            showTime="7:00 PM"
-          />
-          <DealCard
-            movieA="Barbie"
-            movieB="The Batman"
-            price={225}
-            originalPrice={450}
-            theater="INOX GVK One"
-            showTime="9:30 PM"
-          />
-          <DealCard
-            movieA="Interstellar"
-            movieB="Inception"
-            price={200}
-            originalPrice={400}
-            theater="AMB Cinemas"
-            showTime="6:45 PM"
-          />
+          {deals.map((deal) => (
+            <DealCard key={deal.id} deal={deal} />
+          ))}
         </div>
       </section>
     </main>
