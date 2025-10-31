@@ -2,26 +2,10 @@
 
 import Image from "next/image";
 import { Countdown } from "./Countdown";
+import {Deal} from "../app/utils/dealGenerator"
 
 type DealCardProps = {
-  deal: {
-    id: number;
-    movieA: {
-      title: string;
-      poster: string;
-      showtime: string;
-    };
-    movieB: {
-      title: string;
-      poster: string;
-      showtime: string;
-    };
-    theater: string;
-    originalPrice: number;
-    discountPrice: number;
-    seatsLeft: number;
-    expiresAt: Date;
-  };
+  deal: Deal;
 };
 
 export function DealCard({ deal }: DealCardProps) {

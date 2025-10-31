@@ -7,25 +7,37 @@ export const sampleTheaters = [
         title: "Dune: Part Two",
         poster:
           "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
-        showtime: "18:41", // 6:41 PM (appears at 1:40, you'll see it!)
+        showtime: "05:40",
       },
       {
         title: "Oppenheimer",
         poster:
           "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-        showtime: "18:50", // 6:50 PM (within 30 min of first)
+        showtime: "05:50",
       },
       {
         title: "Barbie",
         poster:
           "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
-        showtime: "19:00", // 7:00 PM (within 30 min of first)
+        showtime: "06:00",
+      },
+    ],
+  },
+  {
+    theater: "INOX GVK One",
+    city: "Hyderabad",
+    movies: [
+      {
+        title: "Interstellar",
+        poster:
+          "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        showtime: "05:45",
       },
       {
-        title: "The Batman",
+        title: "Inception",
         poster:
-          "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-        showtime: "20:00", // 8:00 PM (separate group, appears at 3:00)
+          "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        showtime: "06:00",
       },
     ],
   },

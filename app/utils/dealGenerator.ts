@@ -10,7 +10,7 @@ type TheaterData = {
   movies: Movie[];
 };
 
-type GeneratedDeal = {
+export type Deal = {
   id: number;
   movieA: {
     title: string;
@@ -90,8 +90,8 @@ function createPairs(movies: Movie[]): Array<[Movie, Movie]> {
 
 //Step 3: Generate deals from theater data
 
-export function generateDeals(theaterData: TheaterData[]): GeneratedDeal[] {
-  const deals: GeneratedDeal[] = [];
+export function generateDeals(theaterData: TheaterData[]): Deal[] {
+  const deals: Deal[] = [];
   let dealId = 1;
 
   for (const theater of theaterData) {
@@ -142,7 +142,7 @@ export function generateDeals(theaterData: TheaterData[]): GeneratedDeal[] {
 }
 
 //Filter deals that arer currently visible
-export function getActiveDeals(deals: GeneratedDeal[]): GeneratedDeal[] {
+export function getActiveDeals(deals: Deal[]): Deal[] {
   const now = new Date();
 
   return deals.filter((deal) => {
