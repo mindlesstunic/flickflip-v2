@@ -146,7 +146,6 @@ export function getActiveDeals(deals: Deal[]): Deal[] {
   const now = new Date();
 
   return deals.filter((deal) => {
-    console.log(now, deal.appearsAt, deal.expiresAt);
     return now >= deal.appearsAt && now < deal.expiresAt;
   });
 }
